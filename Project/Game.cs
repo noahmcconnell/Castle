@@ -111,13 +111,13 @@ namespace CastleGrimtol.Project
         public void Look()
         {
             Console.WriteLine($"{CurrentRoom.Description}");
-            if (CurrentRoom.Name == "BigRoom")
+            if (CurrentRoom.Name == "WetRoom")
             {
                 Console.WriteLine("You made it out alive!");
                 Console.WriteLine(" You win!");
                 Quit();
             }
-            else if (CurrentRoom.Name == "Torture Room" && CurrentPlayer.Bag.Count == 0)
+            else if (CurrentRoom.Name == "Empty Closet" && CurrentPlayer.Bag.Count == 0)
             {
                 Console.WriteLine("You Wont be able to leave now...");
                 Console.WriteLine("You have lost the game.");

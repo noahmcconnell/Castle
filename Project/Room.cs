@@ -25,8 +25,8 @@ namespace CastleGrimtol.Project
             }
             else 
             {
-                Console.WriteLine("You shouldn't go that way.");
-                Console.WriteLine("Which direction would you like to go?");
+                Console.WriteLine("Wrong way");
+                Console.WriteLine("Where now?");
                 return this;
             }
         }

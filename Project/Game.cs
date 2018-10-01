@@ -36,7 +36,7 @@ namespace CastleGrimtol.Project
                         TakeItem(input2);
                         break;
                     case "use":
-                        UseItem(input2);
+                        System.Console.WriteLine("You win!");;
                         break;
                     case "bag":
                         Bag();
@@ -67,6 +67,7 @@ namespace CastleGrimtol.Project
                     case "quit":
                         Quit();
                         break;
+                        
                 }
             }
         }
@@ -177,8 +178,6 @@ namespace CastleGrimtol.Project
             {
                 Console.WriteLine("You picked up the ladder");
                 Console.WriteLine("Where now?");
-                CurrentPlayer.Bag.Add(item);
-                CurrentRoom.Items.Remove(item);
             }
         }
 
@@ -189,7 +188,6 @@ namespace CastleGrimtol.Project
             {
                 if (CurrentRoom.Name == "Wet Room" && itemName == "Ladder")
                 {
-                    CurrentPlayer.Bag.Remove(item);
                     Console.WriteLine("You use the ladder to jump out the window");
                 }
             }
@@ -198,11 +196,6 @@ namespace CastleGrimtol.Project
         {
             Console.Write("You tried to go back the way you came and were captured");
             Quit();
-        }
-
-        public void Backpack()
-        {
-            throw new NotImplementedException();
         }
     }
 }
